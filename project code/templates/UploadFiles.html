@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/static/images/favicon.png" type="image/gif" />
+
+    <title>cloud</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- lightbox Gallery-->
+    <link rel="stylesheet" href="/static/css/ekko-lightbox.css" />
+
+    <!-- font awesome style -->
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="/static/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/static/css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span> Shapel </span>
+          </a>
+          <div class="" id="">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="/">Home</a>
+                  <a href="{{url_for('UploadFiles')}}">File Upload</a>
+                  <a href="{{url_for('viewmyfile')}}">My Files</a>
+                  <a href="{{url_for('sharefile')}}">Share Files</a>
+                  <a href="{{url_for('Viewownerfiles')}}">File Transaction</a>
+                  <a href="/">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="img_container">
+              <div class="img-box" style="margin-left: 0px; width: 1386px">
+                <img src="/static/images/cover.jpg" class="" alt="..."  style="
+                margin-left: 0px;
+                width: 1800px;
+            "/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contact section -->
+      <section class="contact_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-6">
+              <div
+                class="form_container"
+                style="width: 633.88888px;margin-left: 426px;"
+              >
+                <div class="heading_container">
+                  <h2 style="
+                  left: 130px;
+              ">Upload Files</h2>
+                </div>
+                <form
+                  action="{{ url_for('UploadFiles') }}"
+                  class="hero-form"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                <div>
+                    <input type="text" name="FileName" placeholder="Enter FileName" style="
+                    width: 422px;"/ >
+                  </div>
+              <div>
+                <input type="text" name="Keywords" placeholder="Enter Key" style="
+                width: 422px; "/>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="row mb-3">
+                    <div class="col-sm-10" style="
+                    left: 41px;
+                ">
+                      <select class="form-select" name="Police" aria-label="Default select example" style="
+                     width: 430.22222px;
+                      height: 55px;">
+                        <option selected>Select Access Police</option>
+                        <option value="Download">Download</option>
+                        <option value="Read">Read</option>
+                      </select>
+                    </div>
+                  </div>
+            </div>
+            <div>
+                <input type="file" placeholder="Upload files" name="Files"  data-msg="Please enter a valid email" style="
+                margin-left: 50px;
+            " required>
+              </div>
+              
+                  <div>
+                    <center>
+                      <button class="btn btn-primary py-2 px-4" type="submit">
+                        Upload
+                      </button>
+                    </center>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end contact section -->
+    </section>
+    <!-- end slider section -->
+
+    <!-- jQery -->
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/static/js/bootstrap.js"></script>
+    <!-- lightbox Gallery-->
+    <script src="/static/js/ekko-lightbox.min.js"></script>
+    <!-- custom js -->
+    <script src="/static/js/custom.js"></script>
+  </body>
+</html>

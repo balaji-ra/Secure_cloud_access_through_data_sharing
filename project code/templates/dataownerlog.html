@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="/static/images/favicon.png" type="image/gif" />
+
+  <title>cloud</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- lightbox Gallery-->
+  <link rel="stylesheet" href="/static/css/ekko-lightbox.css" />
+
+  <!-- font awesome style -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            Shapel
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="/">Home</a>
+                <a href="{{url_for('dataownerlog')}}">Data Owner</a>
+                <a href="{{url_for('recipientslog')}}">Recipinests</a>
+                <a href="{{url_for('aclog')}}">Authority Center</a>
+                <a href="{{url_for('cslog')}}">Cloud Server</a>
+                <a href="{{url_for('attacker')}}">Attacker</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- slider section -->
+  <section class="slider_section position-relative">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="img_container">
+            <div class="img-box" style="
+            margin-left: 0px;
+            width: 1386px;
+        ">
+              <img src="/static/images/cover.jpg" class="" alt="..."style="
+              width: 1800px;
+          ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- contact section -->
+  <section class="contact_section  ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-lg-6 ">
+          <div class="form_container" style=" 
+          width: 742.88888px;
+          margin-left: 383px;
+      ">
+            <div class="heading_container ">
+              <h2 style="
+              left: 143px;
+          ">
+                Data Owner Login
+              </h2>
+            </div>
+            <form action="{{ url_for('dataownerlog') }}" class="hero-form" method="post">
+              {% if message=="Login successfull" %}
+              <h2 style="color:pink">Login successfull</h2>
+              {% endif %}
+              {% if message=="Login failed" %}
+              <h2 style="color:pink">Login failed Check Email and Password</h2>
+              {% endif %}
+              <div>
+                <input type="email" placeholder="Enter Email" name="doemail"  data-msg="Please enter a valid email" required>
+              </div>
+              <div>
+                <input type="password" name="password" placeholder="Enter Password" required>
+              </div>
+              <div>
+                <center><button class="btn btn-primary py-2 px-4" type="submit">LOGIN</button></center><a style="color:white;" href="{{ url_for('dataowner')}}" type="submit" >Don't Have An Account? <b style="color:skyblue">Sign Up Now</b></a>
+            </div>
+            
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+  </section>
+  <!-- end slider section -->
+ 
+  <!-- jQery -->
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="/static/js/bootstrap.js"></script>
+  <!-- lightbox Gallery-->
+  <script src="/static/js/ekko-lightbox.min.js"></script>
+  <!-- custom js -->
+  <script src="/static/js/custom.js"></script>
+
+</body>
+
+</html>
